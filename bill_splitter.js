@@ -10,5 +10,8 @@ function calculateTip(billAmount){
 }
 let testBill = 100;
 let testTip = calculateTip(testBill);
-console.log(`For a bill of ${testBill}, the tip is ${testTip}`)
-
+console.log(`For a bill of ${testBill}, the tip is ${testTip}`);
+let bills=[275,40,430,125,555,44];
+let tips = bills.map(bills => calculateTip(bills));
+let totals = tips.map((bills,index) => bills + tips[index]);
+console.log(totals);
