@@ -1,3 +1,4 @@
+// Task 1:Calculate the Tip
 let billAmount = 100.0
 let tip = billAmount >= 50 && billAmount <= 300 ? (billAmount * 0.15) : (billAmount * 0.20);
 
@@ -11,7 +12,9 @@ function calculateTip(billAmount){
 let testBill = 100;
 let testTip = calculateTip(testBill);
 console.log(`For a bill of ${testBill}, the tip is ${testTip}`);
-let bills=[275,40,430,125,555,44];
-let tips = bills.map(bills => calculateTip(bills));
-let totals = tips.map((bills,index) => bills + tips[index]);
+
+//Tested the Arrays
+const bill=[275,40,430,125,555,44];
+const tips = bill.map(bill => calculateTip(bill));
+const totals = bill.map((bill, index) => bill + tips[index]);;
 console.log(totals);
